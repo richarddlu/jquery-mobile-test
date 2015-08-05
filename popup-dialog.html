@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<div data-role="page">
+	<div data-role="header">
+		<h1>Popup Dialog Example</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+		<a href="#dialog" data-rel="popup" class="ui-btn" data-position-to="window">Open Dialog</a>
+		<div data-role="popup" id="dialog">
+			<div data-role="header"><h1>Dialog</h1></div>
+			<div data-role="main" class="ui-content">
+				<form id="search-form">
+					<input type="search" id="search-input" />
+				</form>
+			</div>
+			<div data-role="footer">Powered by JQuery Mobile</div>
+			<script type="text/javascript">
+			$('#search-form').submit(function(){
+				window.alert($("#search-input").val());
+			});
+			</script>
+		</div>
+	</div>
+	<div data-role="footer">
+		<p>Powered by JQuery Mobile</p>
+	</div>
+</div>
+</html>
