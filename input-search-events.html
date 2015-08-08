@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<!-- must use data-type instead of type, in order to trigger change event -->
+	<input data-type="search" id="my-search" />
+	<script>
+	$("#my-search").bind("change", function(event, ui){
+		window.alert($("#my-search").val());
+	});
+	</script>
+</body>
+</html>
